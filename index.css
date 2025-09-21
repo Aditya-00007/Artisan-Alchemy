@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Based on user's beautiful design images */
+  --background: hsl(44, 38%, 98%); /* Soft Ivory #FAF9F6 */
+  --foreground: hsl(0, 0%, 18%); /* Charcoal Gray #2F2F2F */
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 18%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 18%);
+  --primary: hsl(11, 65%, 61%); /* Deep Terracotta #E2725B */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(33, 43%, 90%); /* Warm Sand #F4E1D2 */
+  --secondary-foreground: hsl(0, 0%, 18%);
+  --muted: hsl(33, 43%, 90%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --accent: hsl(254, 26%, 36%); /* Indigo Blue #4B3F72 */
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(33, 25%, 85%);
+  --input: hsl(33, 25%, 88%);
+  --ring: hsl(11, 65%, 61%);
+  --chart-1: hsl(11, 65%, 61%);
+  --chart-2: hsl(254, 26%, 36%);
+  --chart-3: hsl(33, 43%, 75%);
+  --chart-4: hsl(25, 60%, 55%);
+  --chart-5: hsl(200, 60%, 50%);
+  --sidebar: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(0, 0%, 18%);
+  --sidebar-primary: hsl(11, 65%, 61%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(33, 43%, 90%);
+  --sidebar-accent-foreground: hsl(11, 65%, 61%);
+  --sidebar-border: hsl(33, 25%, 85%);
+  --sidebar-ring: hsl(11, 65%, 61%);
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 1px 2px 0px rgba(226, 114, 91, 0.05);
+  --shadow-xs: 0px 1px 2px 0px rgba(226, 114, 91, 0.05);
+  --shadow-sm: 0px 1px 3px 0px rgba(226, 114, 91, 0.1), 0px 1px 2px -1px rgba(226, 114, 91, 0.05);
+  --shadow: 0px 1px 3px 0px rgba(226, 114, 91, 0.1), 0px 1px 2px -1px rgba(226, 114, 91, 0.05);
+  --shadow-md: 0px 4px 6px -1px rgba(226, 114, 91, 0.1), 0px 2px 4px -1px rgba(226, 114, 91, 0.05);
+  --shadow-lg: 0px 10px 15px -3px rgba(226, 114, 91, 0.1), 0px 4px 6px -2px rgba(226, 114, 91, 0.05);
+  --shadow-xl: 0px 20px 25px -5px rgba(226, 114, 91, 0.1), 0px 8px 10px -6px rgba(226, 114, 91, 0.05);
+  --shadow-2xl: 0px 25px 50px -12px rgba(226, 114, 91, 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(0, 0%, 8%); /* Dark charcoal */
+  --foreground: hsl(44, 38%, 95%);
+  --card: hsl(0, 0%, 12%);
+  --card-foreground: hsl(44, 38%, 95%);
+  --popover: hsl(0, 0%, 12%);
+  --popover-foreground: hsl(44, 38%, 95%);
+  --primary: hsl(11, 65%, 65%); /* Lighter terracotta for dark mode */
+  --primary-foreground: hsl(0, 0%, 8%);
+  --secondary: hsl(33, 25%, 25%); /* Darker warm sand */
+  --secondary-foreground: hsl(44, 38%, 95%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(0, 0%, 65%);
+  --accent: hsl(254, 40%, 55%); /* Brighter indigo for dark mode */
+  --accent-foreground: hsl(0, 0%, 8%);
+  --destructive: hsl(0, 63%, 50%);
+  --destructive-foreground: hsl(44, 38%, 95%);
+  --border: hsl(0, 0%, 18%);
+  --input: hsl(0, 0%, 18%);
+  --ring: hsl(11, 65%, 65%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
