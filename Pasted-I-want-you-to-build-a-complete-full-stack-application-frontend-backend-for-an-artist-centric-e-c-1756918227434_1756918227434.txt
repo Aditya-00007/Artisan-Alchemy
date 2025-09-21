@@ -1,0 +1,221 @@
+I want you to build a complete full-stack application (frontend + backend) for an artist-centric e-commerce platform. The app should look and behave like Flipkart/Amazon in usability but with additional unique features for artists, including Generative AI storytelling and image-based authenticity verification to ensure the products are handcrafted.
+
+The final output must be a ready-to-run zip package with frontend + backend, preconfigured dependencies, and setup instructions so I can run the app locally without errors.
+
+🔹 FRONTEND REQUIREMENTS
+
+Framework & Tech
+
+Use React.js (with functional components + hooks).
+
+Styling with Tailwind CSS / Material UI.
+
+State management: Redux Toolkit or Context API.
+
+Routing: React Router.
+
+Key Pages & Components
+
+Login / Signup (Customer & Artist) with role selection.
+
+Homepage:
+
+Hero banner with trending products.
+
+Categories: Paintings, Crafts, Sculpture, Photography, Digital Art, etc.
+
+Carousels: New Arrivals, Bestsellers, Artist Spotlights.
+
+Smart search with predictive suggestions.
+
+Product Listing Page with filters (category, price, material, location, authenticity).
+
+Product Detail Page:
+
+High-quality images (zoom + 360° view).
+
+Product info: title, price, description, category.
+
+Artist info with verified badge.
+
+Unique Button: “Know the Story” → shows text, video, or AI-generated narrative.
+
+Add to Cart, Wishlist, Buy Now.
+
+Reviews + Ratings (with media uploads).
+
+Certificate of Authenticity section.
+
+Customer Dashboard: Orders, Wishlist, Recently Viewed, Saved Stories, Profile.
+
+Artist Dashboard: Add product, connect verification, upload story, sales analytics.
+
+Admin Dashboard: Manage users, approve/reject artists & products, fraud detection, analytics.
+
+Cart & Checkout: Editable cart, order summary, tax breakdown, shipping, payment options (mock integration).
+
+Frontend Integration Requirements
+
+All buttons and links must be functional (no redirect to 404).
+
+Must consume backend APIs for categories, products, cart, orders, stories, etc.
+
+Responsive design (desktop, tablet, mobile).
+
+Accessibility support (alt text, ARIA labels).
+
+🔹 BACKEND REQUIREMENTS
+
+Tech Stack
+
+Node.js + Express.js.
+
+MongoDB with Mongoose.
+
+JWT-based authentication for customers/artists/admin.
+
+bcrypt for password hashing.
+
+dotenv for environment configs.
+
+CORS enabled for frontend-backend communication.
+
+AI integration: OpenAI/Gemini API for story generation.
+
+Image processing (OpenCV/TensorFlow.js or mock API) for authenticity verification.
+
+APIs (must match frontend calls)
+
+Auth:
+
+/api/auth/register (with role: customer/artist).
+
+/api/auth/login (JWT token).
+
+/api/auth/logout.
+
+Categories:
+
+/api/categories → return category list.
+
+Products:
+
+/api/products → all products.
+
+/api/products/:id → single product detail.
+
+/api/products/category/:categoryId → products by category.
+
+Cart:
+
+/api/cart (GET user cart).
+
+/api/cart/add (POST).
+
+/api/cart/remove/:id.
+
+/api/cart/checkout.
+
+Orders:
+
+/api/orders → user’s orders.
+
+/api/orders/:id → order detail.
+
+Artist:
+
+/api/artists/:id → artist profile.
+
+/api/artists/products → products by artist.
+
+/api/artists/verify → upload docs for verification.
+
+Admin:
+
+/api/admin/verifyArtist.
+
+/api/admin/verifyProduct.
+
+/api/admin/stats.
+
+AI:
+
+/api/ai/story → Generate story (input: product details).
+
+/api/ai/verify → Image authenticity check (mocked for prototype).
+
+Database Models
+
+User: {name, email, passwordHash, role, verifiedStatus, artistPortfolio}.
+
+Product: {title, description, category, price, stock, artistId, story, authenticityStatus}.
+
+Category: {name, description}.
+
+Cart: {userId, items[]}.
+
+Order: {userId, products[], totalAmount, status, paymentDetails}.
+
+Review: {productId, userId, rating, comment, media[]}.
+
+Backend Features
+
+Middleware: JWT auth, role-based access.
+
+Error handling with custom middleware.
+
+Logging with Morgan/Winston.
+
+API documentation via Swagger/Postman.
+
+Seed data for users, categories, products, orders.
+
+🔹 FIXES & DELIVERABLES
+
+Bug Fixes
+
+Currently, frontend buttons redirect to 404. Connect all frontend actions (categories, product, cart, story, artist, admin) with backend APIs.
+
+Ensure every feature (view categories, add product, checkout, etc.) returns data.
+
+Deliverables
+
+Provide a zip file with:
+
+/frontend folder (React code).
+
+/backend folder (Express + MongoDB).
+
+README.md with setup instructions:
+
+Install dependencies (npm install).
+
+Run backend (npm start).
+
+Run frontend (npm start).
+
+Required .env variables (DB_URI, JWT_SECRET, API_KEYS).
+
+Pre-seeded demo data so the app runs locally without manual input.
+
+Non-Functional Requirements
+
+Security: Hash passwords, validate inputs.
+
+Scalability: Modular routes, controllers, services.
+
+Accessibility: Alt text for images, ARIA roles.
+
+Responsiveness across devices.
+
+🔹 Final Outcome
+
+A fully working e-commerce app for artists, with no 404 errors.
+
+Frontend (React) connected to backend (Node/Express + MongoDB).
+
+Features: Login, category browsing, product detail with “Know the Story,” add to cart, checkout, reviews, dashboards for customer/artist/admin.
+
+AI integration for storytelling and authenticity verification.
+
+Local zip with all files, dependencies, seed data, and run instructions.

@@ -1,0 +1,194 @@
+Frontend (React + Tailwind + shadcn/ui)
+1. Color Palette
+
+Use a pleasing, modern, and culturally rich palette:
+
+Primary: Deep Terracotta (#E2725B)
+
+Secondary: Warm Sand (#F4E1D2)
+
+Accent: Indigo Blue (#4B3F72)
+
+Background: Soft Ivory (#FAF9F6)
+
+Text: Charcoal Gray (#2F2F2F)
+
+Ensure contrast and readability while maintaining a traditional + modern aesthetic.
+
+2. Product Pages
+
+Replace all $ with ₹ (INR symbol) for Indian pricing.
+
+Each product card should include:
+
+Product Image (high-res, optimized)
+
+Name & Short Description
+
+Price (₹)
+
+Rating (stars)
+
+"Buy Now" & "Add to Cart" buttons
+
+3. Explore Artwork / Categories / Artists Pages
+
+Currently showing "No Item Found" → Fix by displaying default example products/artworks (3–5 dummy entries).
+
+Show categories like: Pottery, Textiles, Paintings, Jewelry, Sculptures, Bamboo Craft, Warli Art.
+
+For Artists: show sample profiles with images, short bios, and featured works.
+
+4. AI Story Generator Page
+
+When a user clicks "Generate Story":
+
+Generate a short handcrafted-art-related story (200–300 words) in 3–4 emotional, engaging paragraphs.
+
+Story should connect artisan heritage, customer emotions, and product uniqueness.
+
+Background should show comic-style or pottery/art-related images (use relevant stock backgrounds or subtle illustrations).
+
+The story should feel personal, emotional, and connect buyer to artist. Example: a pottery piece carrying cultural legacy.
+
+5. Authentication (Signup & Login)
+
+Options:
+
+Signup/Login via Email OTP Verification
+
+Enter email → receive OTP → verify → login success.
+
+Signup/Login via Google (OAuth integration).
+
+Store user details securely (Firebase/Auth backend preferred).
+
+6. Buying Products
+
+When buying:
+
+Ask for Full Address (Name, Street, City, State, PIN, Mobile).
+
+Provide Autofill option if address already saved.
+
+Select Payment Mode (UPI, Card, Net Banking, COD).
+
+After order → show confirmation screen & send email receipt.
+
+7. Artist Product Publishing
+
+Artist must:
+
+Upload product image.
+
+Image Processing Check → validate if it is handcrafted (basic heuristic or ML-based).
+
+Sign an undertaking: "I confirm this product is handcrafted by me and not machine-made. If found guilty, I accept consequences."
+
+Only after authentication, product will go live.
+
+8. Dashboards
+For Customers:
+
+Sections:
+
+Recommended for You / Today’s Hot Picks (based on searches + purchases).
+
+Order History
+
+Wishlist
+
+Saved Artists
+
+Settings (profile, address, preferences).
+
+For Artists:
+
+Sections:
+
+My Products (Live, Pending Approval)
+
+Upload New Product (with undertaking)
+
+Earnings Dashboard (Orders, Sales, Revenue, Pending Payments)
+
+Profile & Bio Management
+
+Customer Reviews
+
+Backend (Node.js + Express + MongoDB/Firebase)
+
+Products API
+
+CRUD for products
+
+Fetch by category, artist, trending, recommended
+
+Auto-suggest for search
+
+Authentication API
+
+OTP-based email verification
+
+Google OAuth login
+
+JWT for session management
+
+AI Story Generator API
+
+Takes product/art style input
+
+Returns a 200–300 word story in 3–4 paragraphs
+
+Optionally attach background image (art style-based).
+
+Order & Payment API
+
+Address storage & autofill
+
+Payment gateway integration (Razorpay/Paytm/UPI simulation)
+
+Order confirmation + email invoice
+
+Artist Verification API
+
+Accepts uploaded product image
+
+Basic ML/heuristic check for handcrafted vs machine-made
+
+Stores artist undertaking in DB
+
+Recommendation Engine
+
+Suggest products to users based on:
+
+Browsing history
+
+Purchase history
+
+Trending items
+
+Extra Requirements
+
+Add proper 404 and 500 error pages (with art-related illustrations).
+
+All data (products, artists, orders, users) should be stored in database.
+
+Zip file should include:
+
+Frontend (React app) with above UI
+
+Backend (Node.js) with all APIs implemented
+
+Database setup (MongoDB/Firebase) with dummy entries
+
+Instructions (README.md) to run project locally (npm install → npm run dev for frontend, npm run start for backend).
+
+👉 This prompt ensures your app has:
+✔ Beautiful UI with Indian touch
+✔ Dummy products/artists to avoid empty pages
+✔ OTP + Google authentication
+✔ AI-powered emotional storytelling with background images
+✔ Smooth buying flow with autofill
+✔ Artist product verification with authenticity checks
+✔ Customer & Artist dashboards with recommendations
